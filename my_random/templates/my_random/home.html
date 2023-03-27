@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+{% block main %}
+
+    <h1>Home Template</h1>
+
+    <div class="">
+        <div class="">
+            {% for query in queries %}
+                <div class="">
+                    <h5>{{query.id}} -- <a href="{% url 'query' query.id %}">{{query.name}}</a></h5>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock main %}
